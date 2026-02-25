@@ -15,7 +15,9 @@ app.use(cors({
 }))
 
 app.use(express.json())
-
+app.get("/",(req,res)=>{
+res.send("Hello")
+})
 app.use("/api/auth",authRoutes);
 app.use("/api/restaurants",restaurantRoutes);
 app.use("/api/orders",orderRoutes);
